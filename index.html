@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ろっくんの おくち だいぼうけん</title>
+<meta name="description" content="はの なかを ぼうけんしながら、はみがきの コツが まなべる 横スクロール アクション。デンタルフェス（歯科衛生士科）の 出し物から うまれた ゲームです。">
+<meta property="og:title" content="ろっくんの おくち だいぼうけん">
+<meta property="og:description" content="はの なかを ぼうけんしながら、はみがきの コツが まなべる 横スクロール アクション">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FFE3EA">
+<style>
+:root{--ink:#3A2A3E;--pink:#F2647A;--pink2:#C9455D;--mint:#5CCB9F;--cyan:#33C1CF;--cream:#FFF8F0;--bg:#FFE3EA}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:"Hiragino Maru Gothic ProN","Hiragino Maru Gothic Pro","Rounded Mplus 1c","M PLUS Rounded 1c","Yu Gothic","Meiryo",system-ui,sans-serif}
+body{word-break:keep-all;overflow-wrap:anywhere;line-break:strict;display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top)) 16px max(16px,env(safe-area-inset-bottom));
+  background-image:radial-gradient(circle at 12% 18%,#fff6 0 46px,transparent 47px),radial-gradient(circle at 88% 80%,#fff5 0 64px,transparent 65px),radial-gradient(circle at 80% 12%,#fff4 0 28px,transparent 29px)}
+.card{width:min(560px,100%);background:var(--cream);border-radius:28px;padding:26px 22px 22px;text-align:center;box-shadow:0 6px 0 #e7b7c3,0 14px 30px #c9455d22;outline:3px dashed #F7A6B8;outline-offset:-10px}
+.hero{width:118px;height:118px;margin:0 auto 4px;animation:bob 2.4s ease-in-out infinite}
+.hero svg{width:100%;height:100%;display:block}
+@keyframes bob{50%{transform:translateY(-6px) rotate(-3deg)}}
+h1{margin:4px 0 6px;font-size:clamp(24px,6.4vw,34px);line-height:1.25;letter-spacing:.02em}
+h1 small{display:block;font-size:.5em;color:var(--pink2);letter-spacing:.1em}
+p.lead{margin:0 0 18px;font-size:15px;line-height:1.75}
+.btns{display:grid;gap:12px}
+a.btn{display:block;text-decoration:none;border-radius:999px;padding:15px 18px;font-size:19px;font-weight:700;color:#fff;background:var(--pink);box-shadow:0 5px 0 var(--pink2);transition:transform .08s}
+a.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--pink2)}
+a.btn.pc{background:var(--cyan);box-shadow:0 5px 0 #1E98A6}
+a.btn span{display:block;font-size:12.5px;font-weight:400;opacity:.95;margin-top:2px}
+ul.notes{list-style:none;margin:18px 0 0;padding:0;font-size:13px;line-height:1.8;text-align:left}
+ul.notes li{padding-left:1.4em;position:relative}
+ul.notes li::before{content:"";position:absolute;left:.35em;top:.72em;width:.5em;height:.5em;border-radius:50%;background:var(--mint)}
+footer{margin-top:16px;font-size:11.5px;color:#8a6f7a}
+</style>
+</head>
+<body>
+<main class="card">
+  <div class="hero"><svg viewBox="0 -4 100 104" aria-hidden="true"><path d="M22 30 Q22 15 35 15 Q43 15 50 21 Q57 15 65 15 Q78 15 78 30 L78 63 Q78 74 67 74 L33 74 Q22 74 22 63 Z" fill="#FFFCF4" stroke="#3A2A3E" stroke-width="4" stroke-linejoin="round"/><ellipse cx="40" cy="45" rx="4.6" ry="5.8" fill="#3A2A3E"/><ellipse cx="60" cy="45" rx="4.6" ry="5.8" fill="#3A2A3E"/><circle cx="30" cy="55" r="5" fill="#FFA3B8"/><circle cx="70" cy="55" r="5" fill="#FFA3B8"/><path d="M44 55 Q50 61 56 55" fill="none" stroke="#3A2A3E" stroke-width="3.4" stroke-linecap="round"/><rect x="18" y="68" width="64" height="12" rx="6" fill="#33C1CF" stroke="#1E98A6" stroke-width="2.4"/><ellipse cx="37" cy="90" rx="9" ry="6" fill="#E8505B"/><ellipse cx="63" cy="90" rx="9" ry="6" fill="#E8505B"/></svg></div>
+  <h1><small>はみがきを まなべる アクション</small>ろっくんの おくち だいぼうけん</h1>
+  <p class="lead">おとなの おくば「ろっくん」と いっしょに、おくちの なかを ぼうけんしよう。<br>むしばきんを やっつけて、とじこめられた ともだちを たすけてね。</p>
+  <div class="btns">
+    <a class="btn" href="app.html">スマホで あそぶ<span>アプリ版・よこむき・15ステージ・ずかん つき</span></a>
+    <a class="btn pc" href="booth.html">パソコンで あそぶ<span>ブース版・マウスで 3ぷん・コースを えらべる</span></a>
+  </div>
+  <ul class="notes">
+    <li>おとが でます。スマホは よこむきに して あそんでね</li>
+    <li>ログイン・こうこく・かきん は ありません。きろくは この たんまつ だけに のこります</li>
+    <li>デンタルフェス（歯科衛生士科）の 出し物として つくった ゲームです</li>
+  </ul>
+  <footer>© ろっくんの おくち だいぼうけん</footer>
+</main>
+</body>
+</html>
