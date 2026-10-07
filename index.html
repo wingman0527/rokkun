@@ -9,6 +9,8 @@
 <meta property="og:description" content="はの なかを ぼうけんしながら、はみがきの コツが まなべる 横スクロール アクション">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#FFE3EA">
+<link rel="icon" type="image/png" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
 :root{--ink:#3A2A3E;--pink:#F2647A;--pink2:#C9455D;--mint:#5CCB9F;--cyan:#33C1CF;--cream:#FFF8F0;--bg:#FFE3EA}
 *{box-sizing:border-box}
@@ -39,15 +41,23 @@ footer{margin-top:16px;font-size:11.5px;color:#8a6f7a}
   <h1><small>はみがきを まなべる アクション</small>ろっくんの おくち だいぼうけん</h1>
   <p class="lead">おとなの おくば「ろっくん」と いっしょに、おくちの なかを ぼうけんしよう。<br>むしばきんを やっつけて、とじこめられた ともだちを たすけてね。</p>
   <div class="btns">
-    <a class="btn" href="app.html">スマホで あそぶ<span>アプリ版・よこむき・15ステージ・ずかん つき</span></a>
-    <a class="btn pc" href="booth.html">パソコンで あそぶ<span>ブース版・マウスで 3ぷん・コースを えらべる</span></a>
+    <a class="btn" id="aApp" href="app.html">スマホで あそぶ<span>アプリ版・よこむき・15ステージ・ずかん つき</span></a>
+    <a class="btn pc" id="aBooth" href="booth.html">パソコンで あそぶ<span>ブース版・マウスで 3ぷん・コースを えらべる</span></a>
   </div>
   <ul class="notes">
     <li>おとが でます。スマホは よこむきに して あそんでね</li>
     <li>ログイン・こうこく・かきん は ありません。きろくは この たんまつ だけに のこります</li>
     <li>デンタルフェス（歯科衛生士科）の 出し物として つくった ゲームです</li>
   </ul>
-  <footer>© ろっくんの おくち だいぼうけん</footer>
+  <footer>© ろっくんの おくち だいぼうけん<span id="verLine"></span></footer>
 </main>
+<script>
+// いちばん あたらしい 版へ つなぐ（version.json の ビルド番号を ?v= に つけて、ふるい キャッシュを よける）・版の なまえを したに だす
+(function(){ try{ fetch('version.json?t='+Date.now(),{cache:'no-store'}).then(function(r){ return r.ok? r.json() : null; }).then(function(j){ if(!j) return;
+  if(j.appBuild) document.getElementById('aApp').href='app.html?v='+encodeURIComponent(j.appBuild);
+  if(j.boothBuild) document.getElementById('aBooth').href='booth.html?v='+encodeURIComponent(j.boothBuild);
+  var v=[]; if(j.app) v.push('アプリ版 '+j.app); if(j.booth) v.push('ブース版 '+j.booth); if(v.length) document.getElementById('verLine').textContent='　'+v.join('・');
+}).catch(function(){}); }catch(e){} })();
+</script>
 </body>
 </html>
