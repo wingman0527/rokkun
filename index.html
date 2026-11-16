@@ -2,8 +2,11 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://umami-production-c60dc063.up.railway.app; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://umami-production-c60dc063.up.railway.app; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>ろっくんの おくち だいぼうけん</title>
+<!-- M5.8.1: あそんだ ひとの かずを かぞえる（Umami・Cookie なし・この サイトの ときだけ。about.html の「遊んだ人数の集計」）-->
+<script defer src="https://umami-production-c60dc063.up.railway.app/script.js" data-website-id="224ea507-347d-4f3d-98e7-e70b16c91995" data-domains="wingman0527.github.io" data-do-not-track="true"></script>
 <meta name="description" content="はの なかを ぼうけんしながら、はみがきの コツが まなべる 横スクロール アクション。デンタルフェス（歯科衛生士科）の 出し物から うまれた ゲームです。">
 <meta property="og:title" content="ろっくんの おくち だいぼうけん">
 <meta property="og:description" content="はの なかを ぼうけんしながら、はみがきの コツが まなべる 横スクロール アクション">
@@ -32,7 +35,8 @@ a.btn span{display:block;font-size:12.5px;font-weight:400;opacity:.95;margin-top
 ul.notes{list-style:none;margin:18px 0 0;padding:0;font-size:13px;line-height:1.8;text-align:left}
 ul.notes li{padding-left:1.4em;position:relative}
 ul.notes li::before{content:"";position:absolute;left:.35em;top:.72em;width:.5em;height:.5em;border-radius:50%;background:var(--mint)}
-footer{margin-top:16px;font-size:11.5px;color:#8a6f7a}
+footer{margin-top:16px;font-size:11.5px;color:#8a6f7a;line-height:1.9}
+footer a{color:var(--pink2);font-size:13px;font-weight:700}
 </style>
 </head>
 <body>
@@ -46,10 +50,11 @@ footer{margin-top:16px;font-size:11.5px;color:#8a6f7a}
   </div>
   <ul class="notes">
     <li>おとが でます。スマホは よこむきに して あそんでね</li>
-    <li>ログイン・こうこく・かきん は ありません。きろくは この たんまつ だけに のこります</li>
+    <li>ログイン・こうこく・かきん は ありません。なまえ などは あつめず、あそんだ ひとの かず だけ かぞえて います。きろくは この たんまつ だけに のこります</li>
+    <li>あかるい へやで、がめんから はなれて あそんでね。つかれたら やすもう</li>
     <li>デンタルフェス（歯科衛生士科）の 出し物として つくった ゲームです</li>
   </ul>
-  <footer>© ろっくんの おくち だいぼうけん<span id="verLine"></span></footer>
+  <footer><a href="about.html">この ゲームに ついて（データ・けんこう・ライセンス）</a><br>© ろっくんの おくち だいぼうけん<span id="verLine"></span></footer>
 </main>
 <script>
 // いちばん あたらしい 版へ つなぐ（version.json の ビルド番号を ?v= に つけて、ふるい キャッシュを よける）・版の なまえを したに だす
