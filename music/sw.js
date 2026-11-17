@@ -1,7 +1,7 @@
 /* ろっくんの おんがくばこ: でんぱが なくても ひらける ように ページと アイコンを おぼえて おく。
    いつもは ネットの あたらしい ものを つかい（4びょう まって こなければ おぼえた もの）、つながらない ときは おぼえた ものを だす。
    この フォルダ（music/）の なかだけ。ほかの ゲームには さわらない */
-const NAME = 'onbako-8aacd462';
+const NAME = 'onbako-ddb533fa';
 const FILES = ['./', 'about.html', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png', 'apple-touch-icon.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(NAME).then(c => c.addAll(FILES)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => {
